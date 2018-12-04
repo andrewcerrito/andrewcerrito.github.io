@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(255,18);
+  fill(255,10);
   var x = randomGaussian(mean, sd);
   var size = abs(windowWidth/2 - x);
   size = map(size, 0, windowWidth/2, windowHeight/10, windowHeight/4);
@@ -24,8 +24,8 @@ function draw() {
   
   counter++;
   
-  if (counter % 15 == 0) {
-    background(0,5);
+  if (counter % 13 == 0) {
+    background(0,7);
   }
   
   ytrans++;
@@ -34,3 +34,8 @@ function draw() {
   }
   
 }	
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
+}
